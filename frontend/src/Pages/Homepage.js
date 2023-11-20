@@ -26,15 +26,14 @@ import {
         <Box
           display = "flex"
           justifyContent = "center"
-          padding = {2}
+          padding = {0}
           background = "white"
           width ="80%"
           margin = "40px 0 15px 0"
-          borderRadius="lg"
-          borderWidth="1px"
+          borderRadius="0g"
+          borderWidth="0px"
         >
           <Text fontSize="3xl" fontFamily="Work sans">
-            Chat-App
           </Text>
         </Box>
         <Box background = "white" width = "80%" padding = {3} borderRadius="lg" borderWidth="1px">
