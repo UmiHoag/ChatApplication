@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon backend/server.js",
-    "server": "nodemon backend/server.js",
-    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
+    "start":"nodemon backend/server.js",
+    "build":"npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend",
+    "test": "craco test",
+    "server": "nodemon backend/server.js"
   },
   "keywords": [
     "mern",
@@ -16,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@angular/animations": "^16.2.10",
+    "@craco/craco": "^7.0.0-alpha.3",
     "axios": "^1.5.1",
     "bcryptjs": "^2.4.3",
     "cloudinary": "^1.41.0",
@@ -26,6 +28,7 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.1.0",
     "mongoose": "^7.6.3",
+    "node-polyfill-webpack-plugin": "^2.0.1",
     "nodemon": "^3.0.1",
     "react-dom": "^18.2.0",
     "react-lottie": "^1.2.3",
