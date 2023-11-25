@@ -96,10 +96,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         });
       } catch (error) {
         toast({
-          title: "Error Occured!",
-          description: "Failed to send the Message",
+          title: "",
+          description: "",
           status: "error",
-          duration: 5000,
+          duration: 0,
           isClosable: true,
           position: "bottom",
         });
