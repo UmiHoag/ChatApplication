@@ -18,12 +18,10 @@ import {
 } from "@chakra-ui/react";
 
 import { useState } from "react";
-import { useHistory } from "react-router";
 
 const EditModal = ({ user, children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
    const toast = useToast();
-  const history = useHistory();
   const [pic, setPic] = useState();
   const [picLoading, setPicLoading] = useState(false);
 
