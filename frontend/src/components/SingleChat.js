@@ -106,8 +106,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       }
     }
   };
-  socket = io(ENDPOINT);
   useEffect(() => {
+    socket = io(ENDPOINT);
     socket.emit("setup", user);
     socket.on("connected", () => setSocketConnected(true));
     socket.on("typing", () => setIsTyping(true));
