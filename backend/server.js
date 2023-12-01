@@ -44,7 +44,7 @@ const __dirname1 = path.resolve();
 if (process.env.NODE_ENV === "set") {
   app.use(express.static(path.join(__dirname1, "/frontend/build")));
 
-  app.get("*", (req, res) =>
+  app.get("/", (req, res) =>
     res.sendFile(path.resolve(__dirname1, "frontend", "build", "index.html"))
   );
 } else {
@@ -66,7 +66,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://instant-message-application.onrender.com/",
+    origin: "https://instant-message-application.onrender.com/chats",
     // credentials: true,
   },
 });
