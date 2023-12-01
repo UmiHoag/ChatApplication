@@ -106,9 +106,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       }
     }
   };
-
+  socket = io(ENDPOINT);
   useEffect(() => {
-    socket = io(ENDPOINT);
     socket.emit("setup", user);
     socket.on("connected", () => setSocketConnected(true));
     socket.on("typing", () => setIsTyping(true));
@@ -126,9 +125,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
 
   useEffect(() => {
     socket.on("message recieved", (newMessageRecieved) => {
-      if (
-        !selectedChatCompare ||
-        selectedChatCompare._id !== newMessageRecieved.chat._id
+      if ( !selectedChatCompare || selectedChatCompare._id !== newMessageRecieved.chat._id
       ) {
         if (!notification.includes(newMessageRecieved)) {
           setNotification([newMessageRecieved, ...notification]);
