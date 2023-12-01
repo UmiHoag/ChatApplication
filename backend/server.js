@@ -66,7 +66,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "https://instant-message-application.onrender.com/chats",
+    origin: "https://instant-message-application.onrender.com",
     // credentials: true,
   },
 });
