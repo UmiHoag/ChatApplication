@@ -80,11 +80,11 @@ io.on("connection", (socket) => {
   });
 
   socket.on("join chat", (room) => {
-    socket.join(room._id);
-    console.log("User Joined Room: " + room._id);
+    socket.join(room);
+    console.log("User Joined Room: " + room);
   });
-  socket.on("typing", (room) => socket.in(room._id).emit("typing"));
-  socket.on("stop typing", (room) => socket.in(room._id).emit("stop typing"));
+  socket.on("typing", (room) => socket.in(room).emit("typing"));
+  socket.on("stop typing", (room) => socket.in(room).emit("stop typing"));
 
   socket.on("new message", (newMessageRecieved) => {
     var chat = newMessageRecieved.chat;
